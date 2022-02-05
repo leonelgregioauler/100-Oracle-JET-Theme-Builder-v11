@@ -1,0 +1,26 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<h3>Variable Mappings</h3>
+<oj-table id="table" class="paletteTable demo-width-table" aria-label="Assigned Brand / Neutral Palette List"
+    data='[[assigneddatasource]]' 
+    columns='{{columnArray}}'
+    columns-default.sortable='disabled'>
+</oj-table>
+
+<script type="text/html" id="color_code">
+    <td class="demo-width-td">
+      <div class="oj-sm-width-full demo-div-color-mappings" :style.background-color="[[$context.row.cvalue]]"></div>
+    </td>
+</script>
+<script type="text/html" id="cp_name">
+     <td data-bind="text: $context.row.name"></td>
+</script>
+<script type="text/html" id="cp_value">
+     <td data-bind="text: $context.row.cvalue"></td>
+</script>
+<script type="text/html" id="cp_assigned">
+     <td class="oj-helper-text-align-left" data-bind="html: $context.row.associates"></td>
+</script>

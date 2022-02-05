@@ -1,0 +1,35 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<h6>CSS Variable Names and Values</h6>
+<div class="oj-sm-margin-4x-bottom">
+<oj-input-text id="filter" class="oj-form-control-max-width-md" label-hint="Filter" label-edge="inside"
+               placeholder="Type to filter" 
+               on-raw-value-changed="[[handleValueChanged]]" 
+               value="{{filter}}" clear-icon="always">
+</oj-input-text>
+</div>
+<oj-table id='table' aria-label='CSS Variables Table' class="demo-palette-table"
+          data='[[variableCategory]]'
+          display='grid'
+          columns-default.sortable='disabled'
+          scroll-policy='[[scrollPolicyValue]]'
+          columns='[{"headerText": "Color",
+                     "field": "Column1",
+                     "style": "white-space:normal;word-wrap:break-word; width: 100px;"},
+                    {"headerText": "Value",
+                      "field": "Column2",
+                     "style": "white-space:normal;word-wrap:break-word;"},
+                     {"headerText": "Variable Name",
+                      "field": "Column3",
+                     "style": "white-space:normal;"}]'>
+    <template slot='rowTemplate' data-oj-as='variable'>
+     <tr>
+       <td class="demo-var-color" :class="[[{'site-color-null oj-text-tertiary-color': variable.data.cvalue==''}]]" :style.background-color="[[variable.data.bgColor]]"></td>
+       <td class="demo-var-hex oj-typography-body-sm" :class="[[{'site-hex-null': variable.data.cvalue==''}]]"><oj-bind-text value="[[variable.data.cvalue]]"></oj-bind-text></td>
+       <td class="oj-typography-body-sm"><oj-bind-text value="[[variable.data.name]]"></oj-bind-text></td>
+     </tr>
+   </template>
+</oj-table>

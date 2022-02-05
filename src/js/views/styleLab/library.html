@@ -1,0 +1,74 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div >
+
+      <h3>Instructions</h3>
+      <ul>
+        <li><a href="#vars">CSS Variables</a></li>
+        <li><a href="#tooling">Download and Run</a></li>
+        <li><a href="#edit">Create and Edit a Theme</a></li>
+        <li><a href="#stable">Creating a Stable Theme</a></li>
+        <li><a href="#contrast">Contrast Testing</a></li>
+      </ul>
+      
+     <h4 class="oj-sm-margin-4x-top"><a name="vars"></a>CSS Variables</h4>
+      <p>JET CSS variables are production in Redwood in JET 10.</p>
+
+
+     <h4 class="oj-sm-margin-4x-top"><a name="tooling"></a>Download and Run</h4>
+     Theme builder is basically just a mash up of the JET components, which allows you to more easily see the effect of a creating a theme. To start with we'll run theme builder with the default Redwood theme.
+     <ol>
+       <li>Install the <a target='_blank' href="http://www.oracle.com/pls/topic/lookup?ctx=jetlatest&id=GUID-6AEB5A00-22D8-4BC1-AAB3-4134F906C1C0">tooling</a>. If you have used our tooling before you may want to uninstall and reinstall the CLI each time you upgrade to a new version of JET, here are the commands:
+        <ul>
+          <li><code>npm uninstall -g ojet-cli</code></li>
+          <li><code>npm install -g @oracle/ojet-cli</code></li>
+        </ul>
+       </li>
+       <li>Download and unzip <a href="http://www.oracle.com/webfolder/technetwork/jet/public_samples/JET-Theme-Builder-CSS-Vars.zip">JET-Theme-Builder-CSS-Vars.zip</a> into a directory called <code>JET-Theme-Builder-CSS-Vars</code></li>
+       <li>In your CLI cd into the <code>JET-Theme-Builder-CSS-Vars/</code> directory</li>
+       <li>Once in the JET-Theme-Builder-CSS-Vars directory run the following commands:
+         <ol>
+           <li><code>ojet restore</code></li>
+           <li><code>ojet add theming</code></li>
+           <li><code>ojet serve</code></li>
+         </ol>
+       </li>
+      </ol>
+
+      <p>You should now see theme builder running with the default Redwood theme.</p>
+      
+      <p>Now let's try running the purple demo theme provided with theme builder, the files for the purple theme are in the directory <code>src/themes/purple</code>. The <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html">CSS Variables documentation page</a> includes information about creating a <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html#neutralramp">neutral</a> and <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html#brandramp">brand</a> ramp.  You can see these variable values in action by running <code>ojet serve --themes=purple</code>. </p>
+
+
+     <h4 class="oj-sm-margin-4x-top"><a name="edit"></a>Create and Edit a Theme</h4>
+     
+      Now let's create a new theme named 'xyz'. Note that 'xyz' is just an example name, use whatever name you'd prefer:
+      <ul>
+        <li>Run the following commands
+          <ul>
+            <li><code>ojet create theme xyz --basetheme=stable</code>
+               <ul>
+                 <li>This will create the xyz theme files under <code>src/themes/xyz/</code></li>
+                 <li>To extend Redwood instead of Stable use <code>--basetheme=redwood</code> instead, see the <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html#availablethemes">available themes doc</a> for more information</li>
+               </ul>
+            </li>
+            <li><code>ojet serve --themes=xyz</code>
+              <ul>
+                <li>this will compile xyz and inject the generated CSS file in index.html</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Open up <code>src/themes/xyz/web/_xyz.cssvars.settings.scss</code> in your favorite text editor and edit variables. As a test find and the line with <code>--oj-html-font-size</code> and change the value to 2em, which should cause everything to be big. Save the file, saving will cause the theme to automatically rebuild, after which you can view the changes in the browser.</li>
+        <li>More information about theming is available in the <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html" target="_blank">doc</a>, <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=home&demo=rootFramework_childtheming" target="_blank">demos</a>, and <a href="http://www.oracle.com/pls/topic/lookup?ctx=jetlatest&id=GUID-0329F030-A317-42FC-8C1E-A0A82F5AF6AE__GUID-85152B19-88E1-4367-AFC3-9F1ADD91523C" target="_blank">dev guide</a>.</li>
+      </ul>
+      
+  <h4 class="oj-sm-margin-4x-top"><a name="contrast"></a>Contrast Testing</h4>
+  <p>
+    To comply with WCAG 2.1 your theme needs an accessible contrast ratio for text and images
+    as specified in <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">WCAG 2.1 - Section 1.4.3 "Contrast"</a>. To test this we recommend the <a target="_blank" href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">aXe chrome extension</a>.
+  </p>
+</div>

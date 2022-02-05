@@ -1,0 +1,360 @@
+
+.demo-oracle-icon {
+  width: 137px;
+  height: 18px;
+}
+.demo-oracle-icon:before {
+  content: url("images/oracle_logo.svg");
+  display: inline;
+}
+/* Adds padding between logo and application name */
+html:not([dir="rtl"]) .demo-oracle-icon {
+  padding-right: 4px;
+}
+html[dir="rtl"] .demo-oracle-icon {
+  padding-left: 4px;
+}
+
+.site-color-null:after {
+    content: 'N/A';
+}
+
+.site-hex-null:after {
+    content: 'null';
+}
+.demo-experimental {
+  color: red;
+  font-weight: bold;
+}
+
+html .demo-button-pulse.oj-button.oj-component {
+  box-shadow: 0 0 0 0 rgba(0, 130, 48, 0.5);
+  -webkit-animation: pulse 2s 4 cubic-bezier(0.7, 0, 0.5, 1);
+  -moz-animation: pulse 2s 4 cubic-bezier(0.7, 0, 0.5, 1);
+  -ms-animation: pulse 2s 4 cubic-bezier(0.7, 0, 0.5, 1);
+  animation: pulse 2s 4 cubic-bezier(0.7, 0, 0.5, 1); }
+
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 130, 48, 0); } }
+
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 130, 48, 0); } }
+
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 130, 48, 0); } }
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 130, 48, 0); } }
+
+
+
+
+.demo-buttonset-tall .oj-button {
+  min-height: 42px;
+}
+
+.demo-themeroller {
+    overflow: hidden;
+    width: 330px;
+    min-width: 330px;
+    flex-grow: 0;
+}
+
+.demo-components-wrap {
+    overflow: hidden;
+}
+
+.demo-themeroller table
+{
+    border-collapse:collapse;
+    table-layout: fixed;
+    font-family: Consolas, Menlo, Monaco, 'Source Code Pro', 'Courier New', Courier, monospace;
+}
+
+
+.demo-themeroller tr,
+.demo-themeroller th,
+.demo-themeroller td
+{
+  border-color: #c4ced7;
+  border-style: solid;
+}
+
+
+.demo-themeroller th,
+.demo-themeroller td
+{
+    border-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 3px;
+}
+
+.demo-themeroller tr,
+.demo-themeroller td:first-child {
+   border-width: 1px
+}
+
+
+.demo-var-color {
+    width: 100px;
+}
+
+.demo-var-hex {
+    width: 10em;
+}
+
+.monoimages {
+  width: 75px; height: 25px;
+  display: inline-block;
+}
+.marginBottom {
+  margin-bottom: 15px;
+}
+.verticalstyle div {
+  overflow: hidden;
+}
+.verticalstyle div span, .verticalstyle div img {
+  float: left;
+}
+.verticalstyle img.monocommonimages {
+  width: 200px; height: 30px;
+}
+.verticalstyle span {
+  line-height: 30px;
+}
+.paletteTable table tbody tr td.oj-table-data-cell,
+.paletteTable table thead tr th div.oj-table-column-header {
+  text-align: center;
+  border-right: none;
+}
+.paletteTable table thead tr th div.oj-table-column-header {
+  font-weight: bold;
+}
+.oj-table-body-row .oj-table-body-row {
+  height: auto;
+}
+.oj-table-data-cell.oj-hover {
+  background-color: transparent;
+}
+
+.oj-messages-general {
+  width: 500px;
+  min-width: 500px;
+}
+
+.demo-vars-setting-dialog {
+    width: 50vw;
+    position: fixed;
+}
+
+.demo-settings-textarea,
+.demo-settings-select-one,
+.demo-width-table { 
+  max-width: 100%; 
+}
+
+.demo-width-td {
+  width: 200px;
+}
+
+.demo-info-contain{
+   float:left;
+   width:100%;
+}
+
+.demo-value-contrast{
+  width:45px;
+  float:left;
+  text-align:center;
+}
+
+.demo-main-panel {
+  border-color: var(--oj-panel-1-border-color) !important;
+  margin-top: 20px;
+}
+.demo-result-highlight {
+  font-weight: bold;
+}
+.demo-color-picker {
+  max-width: 20em;
+}
+.demo-color-picker-item {
+  display: flex;
+}
+.demo-color-box {
+  border: 1px solid;
+  height: 30px;
+  width: 30px;
+}
+html:not([dir="rtl"]) .demo-color-box {
+  margin-right: 8px;
+}
+html[dir="rtl"] .demo-color-box {
+  margin-left: 8px;
+}
+
+.demo-typography-table {
+    border-collapse: collapse;
+}
+.demo-typography-table td,
+.demo-typography-table th {
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+.demo-typography-table td:last-of-type {
+    white-space: normal;
+}
+.demo-navlist-container {
+    max-width: 300px;
+}
+.demo-panel-customizations {
+  width:  200px;
+  height: 75px;
+}
+
+.demo-palette-table {
+  font-family: monospace;
+  font-size: .875em;
+  width: 100%;
+}
+.demo-palette-table thead th {
+  background-color: rgb(245, 245, 245);
+}
+.demo-palette-table .demo-space-td {
+  width: 20px;
+}
+
+.demo-div-color-mappings {
+  height: 40px;
+}
+
+.demo-conveyor-controls {
+  width: 500px;
+  max-width: 100%;
+}
+
+.demo-film-strip-controls {
+  width: 1px;
+  min-width: 100%;
+}
+
+.demo-paging-div-controls {
+  text-align: center;
+  width: 1px;
+  min-width: 100%;
+}
+
+.demo-div-swipe-controls {
+  width: 300px;
+  height: 80px;
+}
+
+.demo-div-create-palette {
+  height: 40px;
+}
+
+.demo-div-data {
+  width: 500px;
+  max-width: 100%;
+}
+
+.demo-indexer-data {
+  height: auto;
+}
+
+.demo-div-settings-data {
+  position: relative;
+}
+
+.demo-data-grid-data {
+  width: 370px;
+  height: 355px;
+}
+
+.demo-tree-view-data {
+  width: 400px;
+}
+
+.demo-chart-dvt {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  float: left;
+}
+
+.demo-tree-map-dvt {
+  width: 100%;
+  max-width: 400px;
+  height: 298px;
+}
+
+.demo-components-sm-dvt {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+}
+
+.demo-meter-gauge-dvt {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+}
+
+.demo-rating-gauge-dvt {
+  width: 100%;
+  max-width: 150px;
+  height: 50px;
+}
+
+.demo-led-gauge-dvt {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.demo-components-md-dvt {
+  width: 100%;
+  max-width: 650px;
+  height: 300px;
+}
+
+.demo-nbox-dvt {
+  height: 600px;
+  width: 100%;
+}
+
+.demo-picto-chart-dvt {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.demo-width-div-forms {
+  max-width: 400px;
+}
+
+.demo-heading-layout {
+  font-weight: normal;
+  font-style: italic
+}
+
+.demo-width-dialog-layout {
+  height: 200px;
+}
+
+.demo-table-migration {
+  width: 100%;
+  height:auto;
+  font-size:12px;
+}
+
+.demo-popup-tour {
+  width: 700px;
+  max-width: 95%;
+}

@@ -1,0 +1,137 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+
+                    <div class="oj-flex">
+                        <div class="oj-flex-item oj-sm-12 oj-lg-6 oj-sm-padding-2x-horizontal">
+
+                            <!-- todo: not responsive, hide it on small screens -->
+                            <div class="oj-sm-only-hide">
+                                <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Table with PagingControl</h2>
+                                <div class="demo-div-data">
+                                    <oj-table id="table" summary="Department List"
+                                              aria-label="Departments Table"
+                                              data="[[datasource]]"
+                                              class='oj-sm-width-full'
+                                              columns-default.sortable='disabled'
+                                              columns='[{"headerText": "Department Id", "field": "DepartmentId"},
+                                                        {"headerText": "Department Name", "field": "DepartmentName"},
+                                                        {"headerText": "Location Id", "field": "LocationId"}]'>
+                                    </oj-table>
+                                    <oj-paging-control id="paging" data='[[datasource]]' page-size='15' slot='bottom'>
+                                    </oj-paging-control>
+                                </div>
+                            </div>
+
+                            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">List View, Indexer, Pull to Refresh, Swipe to Reveal</h2>
+                            <div class="oj-flex oj-sm-flex-wrap-nowrap" id="listviewContainer">
+                                <oj-list-view id="listviewindexer"
+                                              drill-mode="none"
+                                              class="oj-flex-item"
+                                              selection-mode="multiple">
+                                    <ul>
+                                        <li><span>A</span>
+                                            <ul>
+                                                <li class="oj-swipeactions-container">
+                                                    <oj-swipe-actions>
+                                                        <oj-list-item-layout>
+                                                            <span class="oj-typography-body-md">Chris Black</span>
+                                                            <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">Swipe either left or right on this row to reveal actions!</span>
+                                                            <span slot="tertiary" class="oj-typography-body-xs oj-text-color-tertiary">Finance</span>
+                                                        </oj-list-item-layout>
+                                                        <template slot="start">
+                                                            <oj-option value="read">Read
+                                                                <span class="demo-chat-icon-24 demo-icon-font-24" slot="startIcon"></span>
+                                                            </oj-option>
+                                                        </template>
+                                                        <template slot="end">
+                                                            <oj-option class="oj-swipeactions-neutral" value="more">More
+                                                                <span class="demo-gear-icon-16 demo-icon-font-24" slot="startIcon"></span>
+                                                            </oj-option>
+                                                            <oj-option class="oj-swipeactions-attention" value="flag">Flag
+                                                                <span class="demo-bookmark-icon-16 demo-icon-font-24" slot="startIcon"></span>
+                                                            </oj-option>
+                                                            <oj-option class="oj-swipeactions-danger oj-swipeactions-default" value="trash">Trash
+                                                                <span class="demo-fire-icon-24 demo-icon-font-24" slot="startIcon"></span>
+                                                            </oj-option>
+                                                        </template>
+                                                    </oj-swipe-actions>
+                                                </li>
+                                                <li>
+                                                    <oj-list-item-layout>
+                                                        <span class="oj-typography-body-md">Simon Austin</span>
+                                                        <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">Individual Contributor</span>
+                                                        <span slot="tertiary" class="oj-typography-body-xs oj-text-color-tertiary">Finance</span>
+                                                    </oj-list-item-layout>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><span>G</span>
+                                            <ul>
+                                                <li>
+                                                    <oj-list-item-layout>
+                                                        <span>Douglas Grant</span>
+                                                        <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">Individual Contributor</span>
+                                                        <span slot="tertiary" class="oj-typography-body-xs oj-text-color-tertiary">Finance</span>
+                                                    </oj-list-item-layout>
+                                                </li>
+                                                <li>
+                                                    <oj-list-item-layout>
+                                                        <span>Nancy Greenberg</span>
+                                                        <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">Individual Contributor</span>
+                                                        <span slot="tertiary" class="oj-typography-body-xs oj-text-color-tertiary">Finance</span>
+                                                    </oj-list-item-layout>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><span>P</span>
+                                            <ul>
+                                                <li>
+                                                    <oj-list-item-layout>
+                                                        <span>Luis Popp</span>
+                                                        <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">Individual Contributor</span>
+                                                        <span slot="tertiary" class="oj-typography-body-xs oj-text-color-tertiary">Finance</span>
+                                                    </oj-list-item-layout>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </oj-list-view>
+                                <oj-indexer id="indexer"
+                                            class="oj-sm-flex-initial oj-flex-item demo-indexer-data"
+                                            aria-controls="listviewindexer"
+                                            data="[[getIndexerModel()]]">
+                                </oj-indexer>
+                            </div>
+                        </div>
+                        <div class="oj-flex-item oj-sm-12 oj-lg-6 oj-sm-padding-2x-horizontal">
+                            <!-- todo: not responsive, hide it on small screens -->
+                            <div class="oj-sm-only-hide">
+                                <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Data Grid</h2>
+                                <div class="demo-div-settings-data oj-helper-inline-block">
+                                    <oj-data-grid id="datagrid"
+                                                  selection-mode.cell="multiple"
+                                                  data="[[datagriddatasource]]"
+                                                  header.column.style="width:150px"
+                                                  class="demo-data-grid-data"></oj-data-grid>
+                                </div>
+                            </div>
+                            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Tree View</h2>
+                            <div class="demo-div-settings-data oj-helper-inline-block">
+                                <oj-tree-view id="treeview"
+                                              item.renderer="[[treeViewRenderer]]"
+                                              data="[[treeViewDataSource]]"
+                                              expanded="[[treeViewExpanded]]"
+                                              selection-mode="multiple"
+                                              class="demo-tree-view-data"></oj-tree-view>
+                                <script type="text/html" id="item_template">
+                                    <li>
+                                        <span class="oj-treeview-item-icon"></span><span class="oj-treeview-item-text"><oj-bind-text value="[[title]]"></oj-bind-text></span>
+                                    </li>
+                                </script>
+                            </div>
+                        </div>
+                    </div>

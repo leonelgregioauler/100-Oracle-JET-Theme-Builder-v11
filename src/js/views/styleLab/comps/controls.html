@@ -1,0 +1,745 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+<div class="oj-sm-odd-cols-12 oj-lg-odd-cols-8" >
+  <div class="oj-flex oj-flex-items-pad">
+      <div class="oj-flex-item">
+
+          <!-- Train -->
+          <!-- todo: not responsive, hide it on small screens -->
+          <div class="oj-sm-only-hide">
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Train</h2>
+            <span class="oj-choice-item">
+              <oj-checkboxset id="disableTrain" value="{{trainDisabled}}">
+                <oj-option id="disables" value="disables">disable train</oj-option>
+              </oj-checkboxset>
+            </span>
+
+            <oj-train id="train"
+                      class="oj-helper-margin-start-auto oj-helper-margin-end-auto"
+                      selected-step="stp2"
+                      steps="{{trainSteps}}"></oj-train>
+          </div>
+          <!-- Progress -->
+          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Progress Bar and Circle</h2>
+          <div class="oj-flex oj-sm-flex-items-1">
+            <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+              <h5 class="oj-typography-subheading-sm">Determinate</h5>
+              <oj-progress-bar id="progressbar"
+                           value="70"
+                   ></oj-progress-bar>
+              <br>
+              <oj-progress-circle id="progresscircle"
+                           type="circle"
+                           value="70"></oj-progress-circle>
+            </div>
+            <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+              <h5 class="oj-typography-subheading-sm">Indeterminate</h5>
+              <oj-progress-bar id="progressbar1"
+                           value="-1"></oj-progress-bar>
+              <br>
+              <oj-progress-circle id="progresscircle1"
+                           value="-1"
+                           type="circle"></oj-progress-circle>
+            </div>
+          </div>
+
+
+          <!-- filePicker -->
+
+          <div class="oj-flex-item" >
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">FilePicker</h2>
+            <oj-file-picker>
+            </oj-file-picker>
+          </div>
+
+          <!-- ConveyorBelt -->
+
+
+          <!-- todo: not responsive, hide it on small screens -->
+          <div class="oj-sm-only-hide">
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">ConveyorBelt</h2>
+            <oj-conveyor-belt class="demo-conveyor-controls">
+              <oj-button>Hydrogen</oj-button>
+              <oj-button>Helium</oj-button>
+              <oj-button>Lithium</oj-button>
+              <oj-button>Beryllium</oj-button>
+              <oj-button>Boron</oj-button>
+              <oj-button>Carbon</oj-button>
+              <oj-button>Nitrogen</oj-button>
+              <oj-button>Oxygen</oj-button>
+              <oj-button>Fluorine</oj-button>
+              <oj-button>Neon</oj-button>
+              <oj-button>Sodium</oj-button>
+              <oj-button>Magnesium</oj-button>
+            </oj-conveyor-belt>
+          </div>
+
+          <!-- FilmStrip -->
+          <div class="oj-flex-item oj-sm-12 oj-md-6">
+            <style>
+              .demo-filmstrip-item {
+                  box-sizing: border-box;
+                  width: 100px;
+                  height: 50px;
+                  margin: 5px;
+                  text-align: center;
+                  font-weight: bold;
+              }
+            </style>
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">FilmStrip</h2>
+            <oj-film-strip id="filmStrip" class="demo-film-strip-controls" data-oj-context>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Hydrogen</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Helium</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Lithium</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Beryllium</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Boron</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Carbon</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Nitrogen</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Oxygen</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Fluorine</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Neon</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Sodium</div>
+              <div class="oj-panel oj-panel-alt1 demo-filmstrip-item">Magnesium</div>
+            </oj-film-strip>
+            <div class="demo-paging-div-controls">
+              <div class="oj-helper-inline-block ">
+                <oj-paging-control id="pagingControl"
+                   data="[[filmStripPagingModel]]"
+                   page-size="0"
+                   page-options='{"type": "dots"}'>
+                </oj-paging-control>
+              </div>
+            </div>
+          </div>
+
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Horizontal rule</h2>
+        <hr/>
+
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Headers</h2>
+        <h1>h1 header</h1>
+        <h2>h2 header</h2>
+        <h3>h3 header</h3>
+        <h4>h4 header</h4>
+        <h5>h5 header</h5>
+
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Typography</h2>
+
+        <table class="demo-typography-table" summary="typography classes">
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-2xl</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-2xl">Heading 2xl</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-xl</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-xl">Heading xl</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-lg</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-lg">Heading lg</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-md</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-md">Heading md</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-sm</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-sm">Heading sm</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-heading-xs</span>
+              </td>
+              <td>
+                  <span class="oj-typography-heading-xs">Heading xs</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-2xl</span>
+              </td>
+              <td>
+                  <span class="oj-typography-subheading-2xl">SubHeading 2xl</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-xl</span>
+              </td>
+              <td>
+                  <span class="oj-typography-subheading-xl">SubHeading xl</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-lg</span>
+              </td>
+              <td>
+                  <span class="oj-typography-subheading-lg">SubHeading lg</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-md</span>
+              </td>
+              <td>
+                  <span class="oj-typography-subheading-md">SubHeading md</span>
+              </td>
+          </tr>
+          <tr>
+            <td>
+                <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-sm</span>
+            </td>
+            <td>
+                <span class="oj-typography-subheading-sm">SubHeading sm</span>
+            </td>
+        </tr>
+        <tr>
+          <td>
+              <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-subheading-xs</span>
+          </td>
+          <td>
+              <span class="oj-typography-subheading-xs">SubHeading xs</span>
+          </td>
+      </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-xl</span>
+              </td>
+              <td>
+                  <span class="oj-typography-body-xl">Body xl</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-lg</span>
+              </td>
+              <td>
+                  <span class="oj-typography-body-lg">Body lg</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-md</span>
+              </td>
+              <td>
+                  <span class="oj-typography-body-md">Body md</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-sm</span>
+              </td>
+              <td>
+                  <span class="oj-typography-body-sm">Body sm</span>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-xs</span>
+              </td>
+              <td>
+                  <span class="oj-typography-body-xs">Body xs</span>
+              </td>
+          </tr>
+          <tr>
+            <td>
+                <span class="oj-typography-body-xs oj-typography-bold">class: oj-typography-body-2xs</span>
+            </td>
+            <td>
+                <span class="oj-typography-body-2xs">Body 2xs</span>
+            </td>
+        </tr>
+         
+        </table>
+
+        <div class="oj-flex-item">
+          <h2 class="oj-typography-subheading-md oj-sm-margin-6x-top">Colors</h2>
+
+          <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Text</h5>
+                     
+          <div>
+          
+            <div>
+              <span>text</span>
+              <span class="oj-typography-body-xs  oj-sm-padding-6x-start">default</span>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-primary">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-primary</code>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-secondary">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-secondary</code>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-disabled">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-disabled</code>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-danger">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-danger</code>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-warning">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-warning</code>
+            </div>
+          
+            <div>
+              <span class="oj-text-color-success">text</span>
+              <code class="oj-sm-padding-6x-start">oj-text-color-success</code>
+            </div>
+          </div>
+
+        <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Icons</h5>
+          <div>
+          
+            <div class="oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-ux-ico-heart-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="heart"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span>default</span>
+              </div>
+              
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-primary oj-ux-ico-heart-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="heart"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-primary</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-secondary oj-ux-ico-heart-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="heart"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-secondary</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-disabled oj-ux-ico-heart-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="disabled smiley face"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-disabled</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-danger oj-ux-ico-error-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="error"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-danger</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-warning oj-ux-ico-warning-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="warning"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-warning</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-success oj-ux-ico-success-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="success"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-success</code>
+              </div>
+            </div>
+          
+            <div class= "oj-flex oj-sm-flex-items-initial">
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span class="oj-icon-color-info oj-ux-ico-information-s oj-ux-icon-size-6x" 
+                      role="img" aria-label="info"></span>
+              </div>
+              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <code>oj-icon-color-info</code>
+              </div>
+            </div>
+          
+          
+          
+          </div>
+
+          <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Swipe to reveal </h5>
+          <div class="oj-flex demo-div-swipe-controls">
+              <div class="oj-swipetoreveal-action">
+                  <div class="oj-flex-bar oj-swipeactions-action-panel">
+                      <div class="oj-flex-bar-center-absolute">
+                          <div class="oj-flex oj-sm-flex-direction-column">
+                              <div title="default" role="img" class="oj-flex-item oj-ux-ico-chat"></div>
+                              <div class="oj-flex-item oj-swipeactions-action-text">Default</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="oj-swipeactions-neutral oj-swipetoreveal-action">
+                  <div class="oj-flex-bar oj-swipeactions-action-panel">
+                      <div class="oj-flex-bar-center-absolute">
+                          <div class="oj-flex oj-sm-flex-direction-column">
+                              <div title="more" role="img" class="oj-flex-item oj-ux-ico-settings"></div>
+                              <div class="oj-flex-item oj-swipeactions-action-text">More</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="oj-swipeactions-attention oj-swipetoreveal-action">
+                  <div class="oj-flex-bar oj-swipeactions-action-panel">
+                      <div class="oj-flex-bar-center-absolute">
+                          <div class="oj-flex oj-sm-flex-direction-column">
+                              <div title="flag" role="img" class="oj-flex-item oj-ux-ico-bookmark"></div>
+                              <div class="oj-flex-item oj-swipeactions-action-text">Flag</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="oj-swipeactions-danger oj-swipetoreveal-action">
+                  <div class="oj-flex-bar oj-swipeactions-action-panel">
+                      <div class="oj-flex-bar-center-absolute">
+                          <div class="oj-flex oj-sm-flex-direction-column">
+                              <div title="delete" role="img" class="oj-flex-item oj-ux-ico-fire"></div>
+                              <div class="oj-flex-item oj-swipeactions-action-text">Delete</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Train</h5>
+          <span class="oj-choice-item">
+            <oj-checkboxset id="disableMessageTrain" value="{{trainMessageDisabled}}">
+              <oj-option id="disablesMT" value="disables">disable train</oj-option>
+            </oj-checkboxset>
+          </span>
+
+          
+          <oj-train id="messagingTrainDisabled"
+                     steps="{{trainMessageSteps}}"></oj-train>
+          
+          <div class="oj-flex-item">
+            <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Form control messages</h5>
+            <oj-form-layout id="myform"  label-edge="[[labelEdge]]" max-columns="[[maxColumns]]" direction="[[direction]]" 
+              label-wrapping="[[labelWrap]]" user-assistance-density="[[userAssistanceDensity]]">
+                <oj-input-text  messages-custom='[{"summary":"error", "severity": "error", "detail":"Error message"}]' label-hint="Input Label" aria-label="input with error message"></oj-input-text>
+                <oj-input-text  messages-custom='[{"summary":"warning", "severity": "warning", "detail":"Warning message"}]' label-hint="Input Label" aria-label="input with warning message"></oj-input-text>
+                <oj-input-text  messages-custom='[{"summary":"info", "severity": "info", "detail":"Information message"}]' label-hint="Input Label" aria-label="input with info message"></oj-input-text>
+                <oj-input-text  messages-custom='[{"summary":"confirmation", "severity": "confirmation", "detail":"Confirmation message"}]' label-hint="Input Label" aria-label="input with confirmation message"></oj-input-text>
+            </oj-form-layout>
+         </div>
+
+        </div>
+
+    <div class="oj-flex">
+         <div class="oj-flex-item">
+           <h5 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Page Level Messages</h5>
+           <div>
+              <oj-button on-oj-action="[[function(){document.querySelector('#simpleMessage').position = null;}]]">
+                Inline display
+              </oj-button>
+              <oj-button on-oj-action="[[function(){document.querySelector('#simpleMessage').position = {};document.querySelector('#simpleMessage').display = 'general';}]]">
+                Overlay display
+              </oj-button>
+              <oj-button on-oj-action="[[function(){document.querySelector('#simpleMessage').position = {};document.querySelector('#simpleMessage').display = 'notification';}]]">
+                Notification display
+              </oj-button>
+             <oj-messages id="simpleMessage">
+               <oj-message message='{"severity": "error",
+                                     "summary" : "Message summary text",
+                                     "detail" : "Message detail text"}'></oj-message>
+               <oj-message message='{"severity": "warning",
+                                     "summary" : "Message summary text",
+                                     "detail" : "Message detail text"}'></oj-message>
+               <oj-message message='{"severity": "info",
+                                     "summary" : "Message summary text",
+                                     "detail" : "Message detail text"}'></oj-message>
+               <oj-message message='{"severity": "confirmation",
+                                     "summary" : "Message summary text",
+                                     "detail" : "Message detail text"}'></oj-message>
+             </oj-messages>
+           </div>
+         </div>
+        </div>
+      </div>
+
+
+      <div class="oj-flex-item" >
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Standalone Links</h2>
+          <div><a href="#" class="oj-link-standalone">oj-link-standalone</a></div>
+          <div><a href="#" class="oj-link-standalone oj-link-subtle-primary">oj-link-standalone oj-link-subtle-primary</a></div>
+          <div><a href="#" class="oj-link-standalone oj-link-subtle-secondary">oj-link-standalone oj-link-subtle-secondary</a></div>
+          <div><a class="oj-link-standalone oj-disabled">oj-link-standalone oj-disabled</a></div>
+          
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Embedded Links</h2>
+          <p>This is <a href="#" class="oj-link-embedded">a link with class="oj-link-embedded"</a> in a sentence.</p> 
+          <p>This is <a href="#" class="oj-link-embedded oj-link-subtle-primary">a link with class="oj-link-embedded oj-link-subtle-primary"</a> in a sentence.</p> 
+          <p>This is <a href="#" class="oj-link-embedded oj-link-subtle-secondary">a link with class="oj-link-embedded oj-link-subtle-secondary"</a> in a sentence.</p>
+          <p>This is <a class="oj-link-embedded oj-disabled">a link with class="oj-link-embedded oj-disabled"</a> in a sentence.</p>
+             
+          <!-- Icon Font 
+        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Icon Font</h2>
+          <span role="img" title="$iconColor"
+                class="oj-clickable-icon oj-ux-ico-home" ></span>
+          <span role="img" title="$iconColorDefault"
+                class="oj-clickable-icon oj-default oj-ux-ico-home"></span>
+          <span role="img" title="$iconColorHover"
+                class="oj-clickable-icon oj-hover oj-ux-ico-home"></span>
+          <span role="img" title="$iconColorActive"
+                class="oj-clickable-icon oj-active oj-ux-ico-home"></span>
+          <span role="img" title="$iconColorSelected"
+                class="oj-clickable-icon oj-selected oj-ux-ico-home"></span>
+          <span role="img" title="$iconColorDisabled"
+                class="oj-clickable-icon oj-disabled oj-ux-ico-home"></span>
+           -->
+
+          <!-- Button -->
+
+
+          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Button</h2>
+
+      <span class="oj-choice-item">
+        <oj-checkboxset id="disableButtons" value="{{disableButtons}}" user-assistance-density="compact">
+          <oj-option id="disable" value="disable">disable buttons</oj-option>
+        </oj-checkboxset>
+      </span>
+         <div class="oj-sm-margin-1x-bottom">
+              <oj-buttonset-one id="radioset"
+                                chroming="outlined"
+                                class="oj-buttonset-width-auto"
+                                disabled="[[disableButtons().length > 0]]">
+                  <oj-option id="button1" name="bs1">Choice 1</oj-option>
+                  <oj-option id="button2" name="bs1" checked="checked">Choice 2</oj-option>
+                  <oj-option id="button3" name="bs1">Choice 3</oj-option>
+              </oj-buttonset-one>
+          </div>
+          <div class="oj-sm-margin-1x-bottom">
+            <oj-button id="buttonCTA" chroming="callToAction" disabled="[[disableButtons().length > 0]]">
+              <span slot='startIcon' class='oj-ux-ico-action'></span>
+              <span>Call to Action</span>
+            </oj-button>
+              <oj-button id="buttonFC" chroming="solid" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-actions'></span>
+                <span>Solid</span>
+              </oj-button>
+              <oj-button id="buttonO" chroming="outlined" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>Outlined</span>
+              </oj-button>
+              <oj-button id="buttonHC" chroming="borderless" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>Borderless</span>
+              </oj-button>
+          </div>
+          
+          <div class="oj-sm-margin-1x-bottom">
+            <oj-button id="buttonCTAI" display="icons" chroming="callToAction" disabled="[[disableButtons().length > 0]]">
+              <span slot='startIcon' class='oj-ux-ico-action'></span>
+              <span>Call to Action</span>
+            </oj-button>
+              <oj-button id="buttonFCI" display="icons" chroming="solid" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-actions'></span>
+                <span>Solid</span>
+              </oj-button>
+              <oj-button id="buttonOI" display="icons" chroming="outlined" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>Outlined</span>
+              </oj-button>
+              <oj-button id="buttonHCI" display="icons" chroming="borderless" disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>Borderless</span>
+              </oj-button>
+          </div>
+
+
+          <div class="oj-sm-margin-1x-bottom">
+              <oj-button id="buttonSmall" class="oj-button-sm"
+                      disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>small</span>
+              </oj-button>
+              <oj-button id="buttonIO2" class="oj-button-sm" disabled="[[disableButtons().length > 0]]" display='icons'>
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                small icon only
+              </oj-button>
+          </div>
+          <div class="oj-sm-margin-1x-bottom">
+              <oj-button id="buttonL" class="oj-button-lg"
+                      disabled="[[disableButtons().length > 0]]">
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                <span>large</span>
+              </oj-button>
+              <oj-button id="buttonLIco" class="oj-button-lg"
+                       disabled="[[disableButtons().length > 0]]" display='icons'>
+                <span slot='startIcon' class='oj-ux-ico-home'></span>
+                large icon only
+              </oj-button>
+         </div>
+
+          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Menu</h2>
+          <oj-menu-button id="menuButton">
+            <span>Actions</span>
+            <oj-menu id="menu" slot="menu">
+              <oj-option id="zoomin" value="Zoom In">
+                <span class="oj-ux-ico-zoom-in" slot="startIcon"></span>Zoom In
+              </oj-option>
+              <oj-option id="zoomout" value="Zoom Out">
+                <span class="oj-ux-ico-zoom-out" slot="startIcon"></span>Zoom Out
+              </oj-option>
+              <oj-option id="divider"></oj-option>
+              <oj-option id="save" value="Save">
+                <span class="oj-ux-ico-save" slot="startIcon"></span>Save
+              </oj-option>
+              <oj-option id="print" value="Print..." disabled="true">
+                <span class="oj-ux-ico-print" slot="startIcon"></span>Print...
+              </oj-option>
+            </oj-menu>
+          </oj-menu-button>
+<!-- avatar -->
+          <div class="oj-flex-item" >
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Avatar</h2>
+            <oj-avatar initials="AB">
+            </oj-avatar>
+            <oj-avatar initials="AB" background='orange'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='green'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='teal'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='blue'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='slate'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='pink'>
+            </oj-avatar>
+            <oj-avatar initials="AB" background='purple'>
+            </oj-avatar>  
+            <oj-avatar initials="AB" background='lilac'>
+            </oj-avatar>  
+            <oj-avatar initials="AB" background='gray'>
+            </oj-avatar>  
+            <oj-avatar initials="AB" src="images/avatar-image.jpg">
+            </oj-avatar>
+            <oj-avatar role="img" class="oj-avatar-group-image" size="md">
+            </oj-avatar>
+          </div>
+
+        <!-- Circular Icon -->
+        <div class="oj-flex-item" >
+            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Circular Icon</h2>
+            <span class="oj-icon-circle oj-icon-md" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle oj-icon-md oj-icon-circle-orange" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle oj-icon-md oj-icon-circle-green" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle oj-icon-md oj-icon-circle-teal" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle  oj-icon-md  oj-icon-circle-blue" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle  oj-icon-md  oj-icon-circle-slate" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle oj-icon-md oj-icon-circle-pink" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle oj-icon-md oj-icon-circle-purple" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle  oj-icon-md  oj-icon-circle-lilac" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+            <span class="oj-icon-circle  oj-icon-md  oj-icon-circle-gray" role="img" aria-label="calendar">
+              <span class="oj-icon-circle-inner">
+                <div class="oj-ux-ico-calendar"></div>
+              </span>
+            </span>
+          </div>
+
+          <div class="oj-flex-item" >
+          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Badge</h2>
+          <p>
+            <span class="oj-badge">Default</span>
+            <span class="oj-badge oj-badge-danger">Danger</span>
+            <span class="oj-badge oj-badge-warning">Warning</span>
+            <span class="oj-badge oj-badge-success">Success</span>
+            <span class="oj-badge oj-badge-info">Info</span>
+          </p>
+          <p>
+            <span class="oj-badge oj-badge-subtle">Default</span>
+            <span class="oj-badge oj-badge-danger oj-badge-subtle">Danger</span>
+            <span class="oj-badge oj-badge-warning oj-badge-subtle">Warning</span>
+            <span class="oj-badge oj-badge-success oj-badge-subtle">Success</span>
+            <span class="oj-badge oj-badge-info oj-badge-subtle">Info</span>
+          </p>
+          </div>
+
+        </div> <!--end col-->
+  </div><!-- end row-->
+</div>

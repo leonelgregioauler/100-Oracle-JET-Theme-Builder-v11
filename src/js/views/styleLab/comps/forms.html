@@ -1,0 +1,161 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<h4 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Options To Control the Form Controls Below</h4>
+<div class="oj-panel oj-bg-success-10">
+  <oj-form-layout id='formOptions' max-columns="[[cols]]" direction="row"
+  user-assistance-density='compact'>
+    <oj-checkboxset label-hint="User Assistance" id="booleans" value="{{booleans}}">
+      <oj-option value="placeholder">Placeholder</oj-option>
+      <oj-option value="required">Required</oj-option>
+    </oj-checkboxset>
+    <oj-checkboxset label-hint="Messages" value="{{formControls}}" disabled="[[formState() === 'readonly']]"
+        aria-controls="myform">
+      <oj-option value="error" id="errorControls">Error
+      </oj-option>
+      <oj-option value="warning" id="warningControls">Warning
+      </oj-option>
+      <oj-option value="info" id="infoControls">Info
+      </oj-option>
+      <oj-option value="confirmation" id="confirmationControls">Confirmation
+      </oj-option>
+    </oj-checkboxset>
+    <oj-radioset id="formStateDisabledCBS" value="{{formState}}"
+                label-hint="State" aria-controls="myform">
+        <oj-option id="disabledNo" value="no">Enabled</oj-option>
+        <oj-option id="disabledYes" value="yes">Disabled</oj-option>
+        <oj-option id="flreadonly" value="readonly">Readonly</oj-option>
+    </oj-radioset>
+  </oj-form-layout>
+</div>
+<h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Form Controls</h2>
+<oj-form-layout id="myform" direction="row" max-columns="[[cols]]" 
+    label-wrapping="wrap"  readonly="[[readonlyFormLayout]]"
+    user-assistance-density="[[userAssistanceDensity]]">
+    <oj-input-text id="f1" label-hint="Input text"
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='Username'
+          disabled="[[disableFormControls]]"
+          messages-custom="{{messages}}" required="[[required]]"></oj-input-text>
+    <oj-input-password id="f2" label-hint="Input password"
+          placeholder='{{placeholder()? "placeholder text": null}}'  
+          value='pass'
+          disabled="[[disableFormControls]]" 
+          messages-custom="{{messages}}" required="[[required]]"></oj-input-password>
+    <oj-input-number id="f4" label-hint="Input number" max="100" min="0" step="10"
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='10'
+          disabled="[[disableFormControls]]" 
+          messages-custom="{{messages}}" required="[[required]]"></oj-input-number>
+    <oj-input-date id="f5" label-hint="Input date" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{inputDateValue}}'
+          disabled="[[disableFormControls]]" 
+          messages-custom="{{messages}}" required="[[required]]"> </oj-input-date>
+    <oj-input-time id="f6" label-hint="Input time" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{inputTimeValue}}'
+          disabled="[[disableFormControls]]"
+          messages-custom="{{messages}}" required="[[required]]"> </oj-input-time>
+    <oj-input-date-time id="f7" label-hint="Input datetime" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{inputDateValue}}'
+          converter='[[inputDateTimeConverter]]'
+          disabled="[[disableFormControls]]" 
+          messages-custom="{{messages}}" required="[[required]]"> </oj-input-date-time>
+    <oj-select-single id="f12" label-hint="Single select"
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{((valueLength()) === "long") ? "IE" : null}}' 
+          disabled="[[disableFormControls]]"
+          messages-custom="{{messages}}" required="[[required]]"
+          data="[[browsersDP]]">
+    </oj-select-single>
+    <oj-combobox-one id="f8" label-hint="Combobox" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{((valueLength()) === "long")? "Internet Explorer" : null}}'
+          disabled="[[disableFormControls]]"
+          messages-custom="{{messages}}" required="[[required]]">
+          <oj-option value="Internet Explorer">Windows10InternetExplorer</oj-option>
+          <oj-option value="Firefox">Android 11 Firefox</oj-option>
+          <oj-option value="Chrome">Chrome</oj-option>
+          <oj-option value="Opera">Windows 10 Opera</oj-option>
+          <oj-option value="Safari">iOS Iphone 11Pro Safari</oj-option>
+    </oj-combobox-one>
+    <oj-select-many id="f11" label-hint="Select many" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='["Chrome", "Safari"]'
+          disabled="[[disableFormControls]]"
+          messages-custom="{{messages}}" required="[[required]]">
+          <oj-option value="Internet Explorer">Windows10InternetExplorer</oj-option>
+          <oj-option value="Firefox">Android 11 Firefox</oj-option>
+          <oj-option value="Chrome">Chrome</oj-option>
+          <oj-option value="Opera">Windows 10 Opera</oj-option>
+          <oj-option value="Safari">iOS Iphone 11Pro Safari</oj-option>
+    </oj-select-many>
+    <oj-combobox-many id="f9" label-hint="Combobox many" 
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='["Chrome", "Safari"]'
+          disabled="[[disableFormControls]]"    
+          messages-custom="{{messages}}" required="[[required]]">
+          <oj-option value="Internet Explorer">Windows10InternetExplorer</oj-option>
+          <oj-option value="Firefox">Android 11 Firefox</oj-option>
+          <oj-option value="Chrome">Chrome</oj-option>
+          <oj-option value="Opera">Windows 10 Opera</oj-option>
+          <oj-option value="Safari">iOS Iphone 11Pro Safari</oj-option>
+      </oj-combobox-many>
+      <oj-text-area id="f3" label-hint="textarea" rows='4'
+          placeholder='{{placeholder()? "placeholder text": null}}' 
+          value='{{textareaValue3}}'
+          disabled="[[disableFormControls]]" 
+          messages-custom="{{messages}}" required="[[required]]">
+      </oj-text-area>               
+      <oj-switch id="f14" label-hint="Switch"
+           disabled="[[disableFormControls]]"
+           messages-custom="{{messages}}">
+      </oj-switch>
+      <oj-slider id="f13" label-hint="Slider"
+           value="20"
+           max=100 min=0 step=10 
+           disabled="[[disableFormControls]]"
+           messages-custom="{{messages}}">
+      </oj-slider>
+      <oj-range-slider id="f23" label-hint="Slider range"
+          value="[[{start: 10, end: 50}]]"
+          max=100 min=0 step=10 
+          disabled="[[disableFormControls()]]"
+          messages-custom="{{messages}}">
+      </oj-range-slider>
+      <oj-radioset id="f15" label-hint="Radioset" 
+            messages-custom="{{messages}}" 
+            value = 'green'
+            disabled="[[disableFormControls]]" required="[[required]]">
+            <oj-option id="blueopt" value="blue">Blue</oj-option>
+            <oj-option id="greenopt" value="green">Green</oj-option>
+            <oj-option id="redopt" value="red">Red</oj-option>
+      </oj-radioset> 
+      <oj-checkboxset id="f16" label-hint="Checkboxset" 
+            messages-custom="{{messages}}" 
+            value = '["blue"]'
+            disabled="[[disableFormControls]]" required="[[required]]">
+        <oj-option id="blueopt2" value="blue">Blue</oj-option>
+        <oj-option id="greenopt2" value="green">Green</oj-option>
+        <oj-option id="redopt2" value="red">Red</oj-option>
+      </oj-checkboxset>
+      <oj-color-spectrum id="f18" label-hint="Color spectrum" 
+          value='{{colorSpectrumValue}}'
+          messages-custom="{{messages}}" disabled="[[disableFormControls]]">
+      </oj-color-spectrum>
+      <oj-color-palette id="f19" label-hint="Color palette" 
+          palette="[[colorPickerPalette]]" swatch-size="sm" label-display="auto"
+          layout="list" 
+          value='{{colorPaletteValue}}'
+          messages-custom="{{messages}}" disabled="[[disableFormControls]]">
+      </oj-color-palette>
+</oj-form-layout>
+
+<h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Inline Date Picker</h2>
+<div class="demo-width-div-forms">
+    <oj-date-picker></oj-date-picker>
+</div>

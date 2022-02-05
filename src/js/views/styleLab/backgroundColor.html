@@ -1,0 +1,30 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<oj-select-single id="background-color-picker"
+                  class="oj-form-control-width-md"
+                  data="[[dataProvider]]"
+                  item-text="[[getItemText]]"
+                  on-value-changed="[[valueChangedHandler]]"
+                  value="[[selectedValue]]"
+                  label-hint="Background Color"
+                  label-edge="inside">
+  <template slot="itemTemplate">
+    <div class="demo-color-picker-item">
+      <div class="demo-color-box"
+           :style.background-color="[[$current.data.backgroundColor]]">
+      </div>
+      <span>
+        <oj-bind-dom config='[[{
+                       view: HtmlUtils.stringToNodeArray(highlight(
+                         $current.data.label,
+                         $current.searchText
+                       ))
+                     }]]'>
+        </oj-bind-dom>
+      </span>
+    </div>
+  </template>
+</oj-select-single>

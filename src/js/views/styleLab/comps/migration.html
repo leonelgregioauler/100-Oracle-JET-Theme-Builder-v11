@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<h6>Migration</h6>
+<p>CSS Variables were preview in JET 9 and there have been many changes. This table shows CSS variable in JET 9.0.0 and the corresponding CSS variable used in JET10.0.0.</p>
+<oj-table id='table' aria-label='CSS Variables from JET 9.0 to JET 10.0 CSS Variables Migration Table'
+     data='[[dataSource]]'
+     columns='[{"headerText": "CSS Variables 9.0.0.", 
+                "field": "varKey",
+                "resizable": "enabled",
+                "style": "min-width:350px; width:350px; white-space:normal"},
+               {"headerText": "CSS Variables 10.0.0.", 
+                "field": "varValue",
+                "resizable": "enabled",
+                "style": "min-width:350px; width:350px; white-space:normal"},
+               {"headerText": "Notes", 
+                "field": "note",
+                "resizable": "enabled"}]'
+     class='oj-bg-body demo-table-migration'
+     scroll-policy='loadAll'
+     horizontal-grid-visible="enabled">
+</oj-table>

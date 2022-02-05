@@ -1,0 +1,31 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<oj-dialog resize-behavior="resizable" id="modelessCssVars" 
+    dialog-title="Settings File" modality="modeless"  drag-affordance="title-bar"
+    class="demo-vars-setting-dialog" on-oj-focus="[[textlistener]]">
+    <div slot="body">
+        <p>To make changes uncomment variable(s) and set a new value, then hit the apply button.</p>
+        <oj-text-area id="settings-text-area" rows="20" class="demo-settings-textarea" value={{cssvalue}}></oj-text-area>
+    </div>
+    <div slot="footer">
+      <button on-click="[[function(){document.querySelector('#modelessCssVars').close();}]]" data-bind="
+                   ojComponent:{component: 'ojButton',
+                                label: 'Close',
+                                chroming: 'borderless',
+                                disabled: false}">
+      </button>
+      <button data-bind="click:applyCodeChanges.bind($data),
+                   attr:{id:'ApplyBtn'},
+                   ojComponent:{component: 'ojButton', 
+                                display: 'all',
+                                icons: {start:'oj-ux-ico-check oj-ux-icon-size-16'},
+                                label: 'Apply Changes',
+                                chroming: 'full',
+                                disabled: false}">
+      </button>
+    </div>
+</oj-dialog>
+<oj-button id="varSettingsBtnGo" on-oj-action="[[openListener]]" chroming="solid">Set Variables</oj-button>

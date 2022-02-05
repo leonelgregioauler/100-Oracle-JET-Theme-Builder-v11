@@ -1,0 +1,23 @@
+{
+  "name": "oraclejet-app",
+  "version": "1.0.0",
+  "description": "A sample Oracle JavaScript Extension Toolkit (JET) web app",
+  "author": {
+    "name": "Oracle Jet Team",
+    "email": "oraclejet_interest_ww_grp@oracle.com",
+    "homepage": "https://www.oracle.com/jet"
+  },
+  "dependencies": {
+    "@oracle/oraclejet": "~11.1.0"
+  },
+  "devDependencies": {
+    "@oracle/oraclejet-tooling": "~11.1.0",
+    "autoprefixer": "^9.1.5",
+    "node-sass": "^5.0.0",
+    "postcss-calc": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

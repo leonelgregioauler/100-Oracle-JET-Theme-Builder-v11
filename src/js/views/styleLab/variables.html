@@ -1,0 +1,17 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <div>
+ <oj-tab-bar selection="{{selection.path}}" data="[[dataProvider]]" edge="top">
+   <template slot="itemTemplate" data-oj-as="item">
+     <li>
+       <a href="#">
+         <oj-bind-text value="[[item.data.detail.label]]"> </oj-bind-text>
+       </a>
+     </li>
+   </template>
+ </oj-tab-bar>
+ <oj-module config="[[moduleAdapter.koObservableConfig]]"></oj-module>
+</div>

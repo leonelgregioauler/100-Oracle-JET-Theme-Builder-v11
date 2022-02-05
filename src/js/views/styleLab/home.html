@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-panel oj-sm-margin-4x-bottom oj-sm-padding-4x-bottom" >
+  <h3>Welcome to Theme Builder
+    <!--oj-button class="oj-sm-margin-2x-start oj-button-md oj-md-down-hide"
+             chroming="callToAction"
+             on-oj-action="[[startTour]]"
+             :class='[[{"demo-button-pulse": tourPulse}]]'>Tour</oj-button-->
+  </h3>
+  <oj-module config="[[tourConfig]]"></oj-module>
+  Theme Builder is a mashup of components that makes it easier to see the effects of theming changes. More information about theming is available in the <a href="https://www.oracle.com/webfolder/technetwork/jet/jsdocs/CssVariablesOverview.html" target="_blank">doc</a>, <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=home&demo=rootFramework_childtheming" target="_blank">demos</a>, and <a href="http://www.oracle.com/pls/topic/lookup?ctx=jetlatest&id=GUID-0329F030-A317-42FC-8C1E-A0A82F5AF6AE__GUID-85152B19-88E1-4367-AFC3-9F1ADD91523C" target="_blank">dev guide</a>.
+</div>
+
+<div class="oj-offcanvas-outer-wrapper">
+  <div class="oj-offcanvas-inner-wrapper oj-flex oj-lg-flex-wrap-nowrap">
+    <div id="mashup" class="oj-flex-item">
+      <oj-module config="[[moduleAdapter.koObservableConfig]]"></oj-module>
+    </div>
+  </div>
+</div>

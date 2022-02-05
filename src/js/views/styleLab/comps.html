@@ -1,0 +1,41 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<h3 class="oj-lg-hide">Components</h3>
+<div class="oj-md-hide">
+  <oj-label for="categoryfilterselect">Component Category Filter</oj-label>
+  <oj-select-one
+    id="categoryfilterselect"
+    value="{{selection.path}}"
+    class="demo-settings-select-one"
+  >
+    <oj-bind-for-each data="[[componentTypes]]">
+      <template>
+        <oj-option value="[[$current.data.path]]">
+          <span
+            ><oj-bind-text value="[[$current.data.detail.label]]"></oj-bind-text></span>
+        </oj-option> </template></oj-bind-for-each>
+  </oj-select-one>
+</div>
+
+<div class="oj-sm-only-hide">
+  <oj-tab-bar edge="top" selection="{{selection.path}}">
+    <ul>
+      <oj-bind-for-each data="[[componentTypes]]">
+        <template>
+          <li :id="[[$current.data.path]]">
+            <a href="#"
+              ><oj-bind-text
+                value="[[$current.data.detail.label]]"></oj-bind-text></a>
+          </li> </template></oj-bind-for-each>
+    </ul>
+  </oj-tab-bar>
+</div>
+
+<div class="oj-panel demo-main-panel" :style.background-color="[[bgColor]]">
+  <oj-module config="[[bgModule]]"></oj-module>
+
+  <oj-module config="[[moduleAdapter.koObservableConfig]]"></oj-module>
+</div>

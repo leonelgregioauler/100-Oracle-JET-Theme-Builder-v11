@@ -1,0 +1,346 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+
+                      <div class="oj-sm-odd-cols-12 oj-lg-odd-cols-8" >
+                        <div class="oj-flex">
+                            <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+
+
+                          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top oj-sm-padding-2x-top">Tab Bar</h2>
+                          <!-- todo: not responsive, hide it on small screens -->
+                          <div class="oj-sm-only-hide">
+                              <div   class="oj-sm-padding-2x-vertical">
+                                <h4 class="demo-heading-layout">edge: 'top'</h4>
+                                <div id="horizontalnavtabsdisplay">
+                                  <oj-tab-bar display="[[navlistdisplay]]"
+                                                      edge="top"
+                                                      selection="home4">
+                                      <ul >
+                                          <li  id="home4">
+                                            <a href="#">
+                                                <span class="oj-tabbar-item-icon oj-ux-ico-home">
+                                                </span>
+                                                Home
+                                            </a>
+                                          </li>
+                                          <li >
+                                            <a href="#">
+                                                <span class="oj-tabbar-item-icon oj-ux-ico-education">
+                                                </span>
+                                                Getting Started
+                                            </a>
+                                          </li>
+                                          <li  class="oj-disabled">
+                                            <a href="#">
+                                                <span class="oj-tabbar-item-icon oj-ux-ico-color-palette">
+                                                </span>
+                                                Theme Builder
+                                            </a>
+                                          </li>
+                                      </ul>
+                                  </oj-tab-bar>
+                                </div>
+                              </div>
+                          </div><!-- end of hiding horizontal nav on small screens -->
+
+                          <div   class="oj-sm-padding-2x-vertical">
+
+                              <h4 class="demo-heading-layout">edge: 'start'</h4>
+                              <div id="navtabsdisplay">
+                                    <oj-tab-bar display="[[navlistdisplay]]"
+                                                        selection="home6"
+                                                        edge="start">
+                                        <ul >
+                                            <li  id="home6">
+                                              <a href="#">
+                                                  <span class="oj-tabbar-item-icon oj-ux-ico-home">
+                                                  </span>
+                                                  Home
+                                              </a>
+                                            </li>
+                                            <li >
+                                              <a href="#">
+                                                  <span class="oj-tabbar-item-icon oj-ux-ico-education">
+                                                  </span>
+                                                  Getting Started
+                                              </a>
+                                            </li>
+                                            <li  class="oj-disabled">
+                                              <a href="#">
+                                                  <span class="oj-tabbar-item-icon oj-ux-ico-color-palette">
+                                                  </span>
+                                                  Theme Builder
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </oj-tab-bar>
+                                </div>
+                            </div>
+
+                          <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top oj-sm-padding-2x-top">Navigation List - Flat</h2>
+                            <!-- todo: not responsive, hide it on small screens -->
+                            <div class="oj-sm-only-hide">
+
+                              <h4 class="demo-heading-layout">edge: 'top'</h4>
+                              <div id="horizontalnavlistdisplay">
+                                <oj-navigation-list display="[[navlistdisplay]]"
+                                                    selection="home3"
+                                                    edge="top">
+                                    <ul >
+                                        <li id="home3">
+                                          <a href="#">
+                                              <span class="oj-navigationlist-item-icon oj-ux-ico-home">
+                                              </span>
+                                              Home
+                                          </a>
+                                        </li>
+                                        <li >
+                                          <a href="#">
+                                              <span class="oj-navigationlist-item-icon oj-ux-ico-education">
+                                              </span>
+                                              Getting Started
+                                          </a>
+                                        </li>
+                                        <li  class="oj-disabled">
+                                          <a href="#">
+                                              <span class="oj-navigationlist-item-icon oj-ux-ico-color-palette">
+                                              </span>
+                                              Theme Builder
+                                          </a>
+                                        </li>
+                                    </ul>
+                                </oj-navigation-list>
+                              </div>
+                            </div><!-- end of hiding horizontal nav on small screens -->
+
+                              <div   class="oj-sm-padding-2x-vertical">
+                                  <h4 class="demo-heading-layout">edge: 'start'</h4>
+                                  <div id="navlistdisplay">
+                                      <oj-navigation-list display="[[navlistdisplay]]"
+                                                          selection="home5"
+                                                          edge="start">
+                                          <ul >
+                                              <li  id="home5">
+                                                <a href="#">
+                                                    <span class="oj-navigationlist-item-icon oj-ux-ico-home">
+                                                    </span>
+                                                    Home
+                                                </a>
+                                              </li>
+                                              <li >
+                                                <a href="#">
+                                                    <span class="oj-navigationlist-item-icon oj-ux-ico-education">
+                                                    </span>
+                                                    Getting Started
+                                                </a>
+                                              </li>
+                                              <li  class="oj-disabled">
+                                                <a href="#">
+                                                    <span class="oj-navigationlist-item-icon oj-ux-ico-color-palette">
+                                                    </span>
+                                                    Theme Builder
+                                                </a>
+                                              </li>
+                                          </ul>
+                                      </oj-navigation-list>
+                                </div>
+                              </div>
+
+              <div class="oj-panel oj-panel-alt1 oj-sm-margin-2x-vertical">
+                <h5 class="oj-typography-subheading-sm">Settings for navigationLists and navigationTabs above</h5>
+                        <div class="oj-flex  oj-flex-items-1 oj-sm-only-flex-direction-column">
+                              <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                                <oj-label id="navlistdisplaylabelid">Display</oj-label>
+                                 <oj-radioset id="navlistdisplayRadioId" labelled-by="navlistdisplaylabelid"
+                                              value="{{navlistdisplay}}">
+                                   <oj-option name="navlistdisplay" value="icons">Icons</oj-option>
+                                   <oj-option name="navlistdisplay" value="all">All</oj-option>
+                                 </oj-radioset>
+                               </div>
+                               <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                                   <oj-label id="contrastBgLabel" for="contrastBgSwitch">Dark Background</oj-label>
+                                   <oj-switch id="contrastBgSwitch" value="{{isContrastBackground}}"></oj-switch>
+                               </div>
+                             </div>
+                           </div>
+
+                            <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Navigation List - Collapsible</h2>
+                            <div id="navlistcontainer" class="demo-navlist-container">
+                              <oj-navigation-list aria-label="Choose a navigation item" drill-mode="collapsible" selection="{{navlistSelectedItem}}">
+                                <ul>
+                                  <li id="home1">
+                                    <a href="#">
+                                      <span class="oj-navigationlist-item-icon
+                                            oj-ux-ico-home">
+                                      </span>
+                                      Home
+                                    </a>
+                                  </li>
+                                  <li id="gettingstarted">
+                                    <a href="#">
+                                      <span class="oj-navigationlist-item-icon
+                                            oj-ux-ico-education">
+                                      </span>
+                                      Getting Started
+                                    </a>
+                                    <ul >
+                                      <li id="download">
+                                        <a href="#" >Download</a>
+                                      </li>
+                                      <li id="quickstart">
+                                        <a href="#" >Quick Start</a>
+                                      </li>
+                                      <li id="build">
+                                        <a href="#" >Build</a>
+                                      </li>
+                                      <li id="testing">
+                                        <a href="#" >Testing</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li id="cookbook">
+                                    <a href="#">
+                                      <span class="oj-navigationlist-item-icon
+                                            oj-ux-ico-book">
+                                      </span>
+                                      Cookbook
+                                    </a>
+                                    <ul >
+                                      <li id="sample1">
+                                        <a href="#" >Sample 1</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li id="stylelab" class="oj-disabled">
+                                    <a href="#">
+                                      <span class="oj-navigationlist-item-icon
+                                            oj-ux-ico-color-palette">
+                                      </span>
+                                      Style Lab
+                                    </a>
+                                  </li>
+                                  <li id="library" >
+                                    <a href="#" >
+                                      <span class="oj-navigationlist-item-icon
+                                            oj-ux-ico-library">
+                                      </span>
+                                      Library
+                                    </a>
+                                  </li>
+                                </ul>
+                              </oj-navigation-list>
+                           </div>
+                        </div>
+                        <div class="oj-flex-item oj-sm-padding-2x-horizontal" >
+
+                        <!-- Panel -->
+
+                        <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Panel</h2>
+                          <div class="oj-flex">
+                            <div class="oj-panel  oj-sm-margin-4x demo-panel-customizations">
+                                <i>default no shadow</i>
+                            </div>
+                        
+                            <div class="oj-panel oj-panel-shadow-sm oj-sm-margin-4x demo-panel-customizations">
+                                <code>oj-panel-shadow-sm</code>
+                            </div>
+                        
+                            <div class="oj-panel oj-panel-shadow-md oj-sm-margin-4x demo-panel-customizations">
+                                <code>oj-panel-shadow-md</code>
+                            </div>
+                        
+                            <div class="oj-panel oj-panel-shadow-lg oj-sm-margin-4x demo-panel-customizations">
+                                <code>oj-panel-shadow-lg</code>
+                            </div>
+                          </div>
+                                <!-- Dialog -->
+                                <div  class="oj-sm-padding-2x-end oj-helper-inline-block ">
+
+                                    <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Dialog</h2>
+                                    <p><oj-button on-click="[[function(){document.querySelector('#dialog').open();}]]">Open Dialog</oj-button>
+                                       <oj-button on-click="[[function(){document.querySelector('#dialogModal').open();}]]">Modal Dialog</oj-button>
+                                    </p>
+
+                                    <!-- oj-dialog -->
+                                    <oj-dialog  id="dialog" dialog-title="Dialog Title" modality="modeless">
+                                        <div slot="body">
+                                            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                        <div slot="footer">
+                                            <oj-button id="dialogOKButton" on-click="[[function(){document.querySelector('#dialog').close();}]]">OK
+                                            </oj-button>
+                                        </div>
+                                    </oj-dialog>
+
+                                    <oj-dialog id="dialogModal" dialog-title="Dialog Title" class="demo-width-dialog-layout" modality="modal">
+                                        <div slot="body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                        <div slot="footer">
+                                            <oj-button id="modalDialogOKButton" on-click="[[function(){document.querySelector('#dialogModal').close();}]]">OK
+                                            </oj-button>
+                                        </div>
+                                    </oj-dialog>
+                                </div>
+
+                                <!-- Popup -->
+                                <div class="oj-helper-inline-block ">
+                                    <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Popup</h2>
+                                    <p><oj-button id="showPopup"
+                                                  on-click="[[function(){document.querySelector('#popup').open('#showPopup > button');}]]">Open Popup</oj-button>
+                                       <oj-button id="popup_link2"
+                                                  on-click="[[function(){document.querySelector('#popuptail').open('#popup_link2 > button');}]]">Popup Tail</oj-button>
+                                    </p>
+
+                                    <!-- oj-popup -->
+                                    <oj-popup id="popup" class="oj-sm-width-1/2">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </oj-popup>
+                                    <oj-popup id="popuptail" class="oj-sm-width-1/4"
+                                              tail="simple"
+                                              position.my.horizontal="center"
+                                              position.my.vertical="bottom"
+                                              position.at.horizontal="center"
+                                              position.at.vertical="top">
+                                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </oj-popup>
+                                </div>
+
+
+                                <!-- Collapsible -->
+
+
+                                <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Collapsible</h2>
+                                <oj-collapsible id="collapsiblePage" expanded="true">
+                                    <h3 slot="header">Header 1</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, risus ac interdum sollicitudin, sem erat ultrices ipsum, eget vehicula nibh augue sollicitudin ligula. Sed ullamcorper cursus feugiat. Mauris tristique aliquam dictum. Nulla facilisi. Nulla ut sapien sapien. Phasellus tristique arcu id ipsum mattis id aliquam risus sollicitudin. </p>
+                                </oj-collapsible>
+                                <!-- Accordion -->
+
+
+                                <h2 class="oj-typography-subheading-sm oj-sm-margin-6x-top">Accordion</h2>
+                                <oj-accordion id="accordionPage">
+                                    <oj-collapsible id="c1" expanded="true">
+                                        <h3 slot="header">Header 1</h3>
+                                        <div>
+                                            <p>
+                                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                            </p>
+                                        </div>
+                                    </oj-collapsible>
+                                    <oj-collapsible id="c2"  disabled="true">
+                                        <h3 slot="header">Disabled Header</h3>
+                                        <p>I'm disabled.</p>
+                                    </oj-collapsible>
+                                    <oj-collapsible id="c3">
+                                        <h3 slot="header">Header 3</h3>
+                                        <p>Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</p>
+                                    </oj-collapsible>
+                                </oj-accordion>
+
+                            </div> <!--end col-->
+                        </div><!-- end row-->
+                      </div>

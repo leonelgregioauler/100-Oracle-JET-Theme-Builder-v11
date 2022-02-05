@@ -1,0 +1,37 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<oj-tab-bar edge="top" selection="{{varlabitem}}">
+  <ul>
+    <oj-bind-for-each data="[[variableType]]"><template>
+      <li :id="[[$current.data.id]]">
+          <a href="#"><oj-bind-text value="[[$current.data.label]]"></oj-bind-text></a>
+      </li>
+    </template></oj-bind-for-each>
+  </ul>
+</oj-tab-bar>
+
+<div class="oj-panel demo-main-panel"
+     :style.background-color="[[bgcolor()]]">
+
+    <oj-bind-if test="[[varlabitem() == 'migration']]"><div>
+      <oj-module config="[[migrationConfig()]]"></oj-module>
+    </div></oj-bind-if>
+
+    <oj-bind-if test="[[varlabitem() == 'createpalette']]"><div>
+        <oj-module config="[[createpaletteConfig()]]"></oj-module>
+    </div></oj-bind-if>
+
+    <oj-bind-if test="[[varlabitem() == 'colormappings']]"><div>
+      <div data-bind="ojModule: 'comps/colormappings'" ></div>
+    </div></oj-bind-if>
+
+    <oj-bind-if test="[[varlabitem() == 'variablelist']]"><div>
+      <h3 class="oj-lg-hide">Files</h3>
+      <oj-module config="[[tutorialConfig()]]"></oj-module>
+    </div></oj-bind-if>
+
+
+</div>
